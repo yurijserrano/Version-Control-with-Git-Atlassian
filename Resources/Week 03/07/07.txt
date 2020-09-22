@@ -1,0 +1,87 @@
+This video discusses rebasing. We'll start with a rebasing overview. We start with a warning. The topics discussed here
+rewrite the commit history, so this should be done with caution. There's a general rule related to rebase, do not rewrite history that
+has been shared with others. If you've been working locally, or if you know that no one else has used
+your branch, you can safely rebase it. There are two types of rebase, a regular
+rebase and an interactive rebase. These can be very different,
+as we will see. A rebase moves commits to a new parent,
+or a base. If we look at the example on the left, we have a situation that would
+typically involve a merge commit, because commit D has been made
+after the featureX branch was made. However, there is another option,
+and that is to rebase. What rebasing does is take commit B and C,
+and moves them to a new parent, commit D. The result is that you no
+longer need a merge commit, and the merge can be fast-forwarded. Because the commits have been moved, they
+are reapplied on top of the new commit. This creates a different
+ancestor chain and, as a result,
+each of the commit IDs change. So in this example, commit B changes to B
+prime, and commit C changes to C prime. You can see that this is necessary
+because before the rebase, commit B's parent was A, and after
+the rebase, commit B prime's parent is D. To help understand how rebasing works,
+we can look at diffs. We know that each commit contains
+a snapshot of the complete project. However, Git can calculate
+the difference between two commits, this is known as a diff, or a patch. So commit A has the entire project,
+commit B has the entire project, Git can calculate diffAB, which is
+the difference between commits A and B. The same goes for commits B and C, diffBC
+is the difference between commits B and C. When rebasing, Git applies
+the diffs to the new parent commit, this is called reapplying commits. In the before commit graph on the left, we can see that the parent of B is A and
+the parent of C is B. And the difference between B and
+A is diffAB, and the difference between C and
+B is diffBC. With rebasing, Git takes
+the difference between A and B, and applies it with the parent of commit D. This creates a new commit ID. It then applies the difference
+between commits B and C, and creates commit C prime. Reapplying commits is a form of merge and
+is susceptible to merge conflicts. If we look at this simple example,
+commit B changed fileA.txt one way, and commit C changed
+fileA.txt in a different way. Reapplying commit B onto commit C
+creates a merge conflict because Git does not know how to write fileA.text. Rebasing has pros and cons, the pros are that you can incorporate
+changes from the parent branch. So if that branch has new features or
+bug fixes, you will see them. The tests on your branch
+are using more current code, and because you are keeping up with
+the changes on other branches, the eventual merge into
+the base branch will be easier. Another big advantage of rebasing is that
+it avoids unnecessary merge commits. You can then have a very well-defined and
+clean commit history. The downside of rebasing
+is it's a form of merge, so merge conflicts may need to be resolved. We've also pointed out that if
+you've already shared your commits, that can cause problems because
+the commit IDs change in a rebase. And, finally, with a rebase,
+you are not preserving the commit history, you are rewriting the commit history. Next, we will discuss executing rebase. To execute a rebase, first you
+check out the feature branch, and then you rebase onto master. In this example, we would check
+out the featureX branch, and rebase onto the tip of the master branch. In SourceTree,
+we first check out the feature1 branch, We right-click on the master branch and
+select Rebase. You are asked if you really want to
+rebase, because it changes the commit history, And then the rebase is finished. So before the rebase, we had the commit
+graph on the left, and after the rebase, you can see that we have the nice
+linear commit graph on the right. Next, we will discuss rebasing
+with merge conflicts. Because a rebase is a form of merge,
+it can result in merge conflicts. To see a merge conflict, first, you check
+out the feature branch, then you rebase onto the master branch, and you will
+be notified that there is a conflict. Just like with other conflicts, Git will modify fileA.txt to
+include conflict markers. You will fix the file,
+add it to the staging area, and then continue the rebase. Looking at a rebase with
+a merge conflict in SourceTree, we start by checking
+out the feature branch. We right-click on the master branch,
+and select Rebase, and you are again asked to confirm the rebase. You are then notified that
+there are merge conflicts and that you need to resolve them. The conflicts are shown as
+uncommitted changes and include conflict markers
+inside of the files. You open the conflicting file and fix it,
+you then add the fixed file to the staging area, you then right-click on the master
+branch again, selecting Rebase again. You will be notified that there
+is a rebase in progress, and you select Continue Rebase,
+And the rebase is complete. You can see the before commit
+graph on the left, and you can see the new commit
+graph on the right. This is also shown in SourceTree. You, again,
+have a nice linear commit graph. If you don't want to resolve
+the merge conflict when it occurs, you can also abort a rebase. What you can do when you see the
+uncommitted changes is select Actions and Abort Rebase. This will take you back to the state
+before you attempted the rebase. Here, we show resolving merge conflicts, comparing the difference between using
+a merge commit and using a rebase. Using a merge commit,
+you start by checking out the base branch, in this case, the master branch, and
+you merge in the featureX branch. You'll have a conflict,
+you fix the conflict, add it to the staging area,
+and then commit the merge. When you re-base, you start by
+checking out the featureX branch, and you rebase onto the master branch. There you will see the conflict,
+you, again, fix it and add it to the staging are, but
+this time, you continue the rebase. Here is a review of what we've
+discussed in this video. Rebasing moves a branch to
+the tip of another branch. Rebasing is a form of merge and
+may result in merge conflicts. Now it's time for you to work on
+the topics discussed in this video. Separate hands-on
+instructions are provided.

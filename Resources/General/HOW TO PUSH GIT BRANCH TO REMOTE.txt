@@ -1,0 +1,7 @@
+HOW TO PUSH GIT BRANCH TO REMOTE
+
+=> https://devconnected.com/how-to-push-git-branch-to-remote/#:~:text=In%20order%20to%20push%20a,branch%20name%20to%20be%20pushed.&text=If%20you%20are%20not%20already,to%20switch%20to%20your%20branch.
+
+=> https://stackoverflow.com/questions/2765421/how-do-i-push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too
+
+=> https://stackoverflow.com/questions/520650/make-an-existing-git-branch-track-a-remote-branch

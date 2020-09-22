@@ -1,0 +1,162 @@
+This video discusses Git branches. We will start with
+an overview of branches. All commits of a project
+belong to a branch. By default commits belong
+to the master branch. A branch is a set of commits starting with
+the most recent commit in the branch and tracing back to
+the projects's first commit. In this example, starting from the most
+recent commit on the branch,the master branch contains commit B and A. The featureX branch contains commits C,
+B and A. Notice that commits B and
+A belong to both branches. Lets take a look at some of
+the benefits of branches. We will see that creating
+a branch is fast and easy, creating a branch only
+creates one tiny file, a reference. Branches enable experimentation. Team members can isolate their work so that it doesn't impact others
+until the work is ready. Branches are not aware of other branches. This allows you to experiment
+with changes to the project while at the same time the team retains
+a stable version of the project. If you have an idea for a change, you
+can create a branch and test your idea. Later, you can throw out your branch or
+merge it into the official project. Branches enable multiple team members
+to concurrently work on the project without stepping on each other’s work. Merging the work together later
+usually is not too difficult. Branches allow you to support multiple
+versions of the project simultaneously. For example, if the project is
+a software project with customers and several supported versions. You can update each version if
+an important hotfix is necessary Branches can be short-lived or
+long-running. Short-lived branches are commonly
+called topic or feature branches and usually contain one small
+change to the project. For example, a topic branch may
+contain a new feature, a bug fix, a hotfix, a configuration change, or any
+other change that the project requires. When it's ready, a topic branch is
+merged into a long running branch. In this example,
+the featureX branch is a topic branch. Two commits where needed
+to create the feature, and then the feature was merged
+into the master branch. Long-running branches,
+like the master branch, live longer than topic branches and
+can even live for the life of the project. Examples of branches that might live for the life of a project are a master
+branch or a develop branch. We will see later that Git branches are
+flexible enough to work with many types of work flows. So you can pick a branching strategy
+that works best for your team and for your project. Branches are located in the local
+repository and in the remote repository. To view local branches in Sourcetree,
+click on the Branches tab. To view remote branches,
+click on the Remotes tab. Next, we will discuss creating a branch. Creating a branch simply
+creates a new branch label. Here we start with just a master
+branch containing three commits. We can create a featureX branch off
+of the most recent master commit by creating a featureX branch label,
+pointing to the commit. To create the featureX
+branch label in Sourcetree, click on Branch to bring
+up the branch window. In the window that opens,
+select New Branch. Type the name of your branch and
+select Create Branch. We'll discuss the other options
+in the window a little later. Next, we will discuss checkout. Checkout is usually related to
+branches and does two main things. First, it switches the current commit,
+which is the commit that the HEAD reference points to,
+to the checked out branch label or commit. In this example,
+if we were on the master branch and then checked out the featureX branch, the
+HEAD reference changes from pointing to the master branch label,
+to pointing to the featureX branch label. The second thing that checkout does is it
+updates the working tree with the files from the checkout commit. Once you have checked out a branch,
+you can work on and commit to the branch. In this example, the featureX label points
+to the same commit as the master branch label so at this point the working tree
+files will be the same for both branches. Creating a branch will also check out
+a branch if the Checkout new branch check box is selected. Checkout new branch is
+selected by default. This means that after
+you create the branch, the working tree will be
+updated if necessary. And the next commit that you make
+will belong to the new branch. Here's a look at what happens if
+you create a branch without having the Checkout new branch
+check box selected. After creating the branch, the HEAD
+reference remains on the original branch. The only thing that you've done is
+create a tiny featureX reference. If you changed the project to this point
+and make a commit, that commit would belong to the master branch because you
+have not checked out the featureX branch. In other words,
+if you don't check out the new branch, the HEAD referenced still points
+to the master branch label. And new commits will be made to the master
+branch leaving the featureX label behind. If you create a branch and have the checkout new branch check box
+selected, the behavior is different. Checking out the featureX branch
+means that the HEAD reference points to the featureX label. And if necessary, the working tree will
+be updated with the files from the commit that you checked out. This means that any work that
+you commit at this point will belong to the featureX branch and
+not the master branch. After you've created and checked out
+the featureX branch, as shown on the left, the next commit that is made will
+be made to the featureX branch. The HEAD reference moves along
+with the featureX label and the master label stays where it was. The master branch no longer
+points to the latest commit. In fact, the master branch doesn't know
+about the featureX branch label or about the latest commit on featureX. This is how the featureX branch can make
+changes to the project without disturbing the master branch. To change branches in Sourcetree, simply click on the branch
+that you'd like to change to. This performs a checkout which means
+that your working tree will be updated with the files from that branch. And the HEAD reference will change
+to point to the new branch label. Once you have switched branches, any work
+that you commit is is to that branch. In this example, we have switched from
+the featureX branch to the master branch. Our working tree will now contain
+the latest files from the master branch. If you attempt to checkout a branch but
+have unsaved work on the current branch, Git will notify you. In general, Git will notify you when
+it thinks you might lose unsaved work. In this example,
+we were on the featureX branch, and made some changes to the working tree. Attempting to switch to the master
+branch brought up a confirmation dialog. If you click on OK at this point,
+your uncommitted changes will be saved by Sourcetree, and
+you are switched to the master branch. The working tree is updated with
+the files from that branch. When you switch back to
+the featureX branch, you will see your uncommitted changes. If you had checked the discard local
+changes button before clicking OK, the local changes would be
+lost as you switch branches. Once we have checked out master, we can
+do some work in the working tree and create a commit. Now the featureX branch and master branch both have a commit that
+doesn't belong to the other branch. You can see that commit D uniquely
+belongs to the featureX branch and commit E uniquely belongs
+to the master branch. Next, we will discuss detached HEADs. Usually you checkout a branch which checks
+out the commit that the branch label points to. But you also have the option of
+directly checking out a commit. For example, you might check out
+a commit to temporarily view an older version of the project. Checking out a commit rather than
+a branch leads to a detached HEAD state. This means that instead of the HEAD
+reference pointing to a branch label, the HEAD points directly
+to the SHA1 of a commit. So a detached HEAD basically means that
+the HEAD reference is detached from a branch label. Git will warn you that if you continue,
+you will be in a detached HEAD state. In this example, in the before state we have the master
+branch checked out, as is normal. If we then check out commit B, that
+commit will become the current commit. And the head reference will
+point directly at commit B, creating a detached HEAD state. Here, we are on the master branch and attempt to check out the initial
+commit by double clicking on it. Sourcetree will warn you that your working
+tree will be updated with the files from that commit, but
+you will then be in a detached HEAD state. Click OK to allow this, or Cancel if you
+want to remain on the master branch. Temporarily viewing the files of a commit
+while in a detached HEAD state is perfectly fine. However, if you want to work on
+files of the checked out commit and create new commits, you should create
+a branch on that commit first. On the left, we have checked out commit B,
+creating a detached HEAD. If we want to create commits
+based off of commit B, we should first create a featureX
+branch label and checkout that branch. That puts us back in the normal
+state where the HEAD reference points to a branch label. The next commit would then be
+made to the featureX branch. Finally, we will discuss
+deleting a branch label. Deleting a branch really just means
+that you're deleting a branch label. Deleting a branch label normally
+does not delete any commits, at least not right away. In the example on the left,
+we created a featureX branch. This simply added the featureX
+label to the latest commit. If we then immediately
+delete the featureX branch, all that happens is that
+the featureX label is deleted. This shows how truly
+lightweight git branches are. One way to delete a branch label in
+Sourcetree is to right click on the branch that you want to delete and
+select Delete branch. In this case,
+we want to delete the featureX branch. Click OK to delete the branch label. Git will check to see if you're putting
+committed work at risk by doing this. This can happen if you have commits
+on the branch that don't belong to any other branches. If you won't lose any work,
+the branch label will be deleted. If deleting the branch label puts
+some of your commits at risk, Git will not allow you
+delete the branch label. If you know that you don't care
+about the unmerged commits, you can click the Force delete check box
+before trying to delete the branch label. And the branch label will be deleted. Let's take a look at what could happen if
+you check the Force delete check box when deleting a branch label. Let's say that you created
+a featureX branch off of commit C of the master branch, as shown. Then you did some work on featureX and
+made commit D. At that point, if you tried to
+delete the featureX branch label, there would be a problem because commit
+D does not belong to any other branch. Sourcetree and Git normally
+will not allow you to do that. However, if you select the Force delete
+check box, that means that the featureX label will be deleted and your left
+with what's called a dangling commit. Commit D doesn't belong to any branch. Git will periodically garbage collect,
+looking for and deleting old dangling commits. So be careful if you check
+the Force delete checkbox. It assumes that you want to throw away
+the work that is in the dangling commits. Here is a review of what we've
+discussed in this video. A branch is a set of commits that trace
+back to the project's first commit. Creating a branch creates a branch label. Checkout involves updating the HEAD
+reference and updating the working tree. A detached HEAD reference
+points directly to a commit. Fix a detached HEAD by creating a branch. Deleting a branch deletes a branch label. Dangling commits will eventually
+be garbage collected. Now it's time for you to try
+the things discussed in this video. Separate hands-on
+instructions are provided.

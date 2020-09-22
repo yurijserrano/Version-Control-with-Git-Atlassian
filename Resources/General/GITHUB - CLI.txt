@@ -1,0 +1,31 @@
+GITHUB - CLI
+
+
+GIT CLI - REPOS
+
+
+GO
+	https://github.com/cli/cli
+	https://github.com/github/hub
+
+
+JAVASCRIPT
+	https://github.com/node-gh/gh
+	https://github.com/IonicaBizau/cli-github
+
+
+PYTHON
+	https://github.com/Mergifyio/git-pull-request
+
+
+==========================================================
+
+GITHUB CLI - VIDEOS
+
+
+GITHUB CLI - OPEN A PULL REQUEST [GOOD]
+	=> https://youtu.be/9Cq0Elj3E-o
+
+USE GITHUB CLI FOR COMMAND LINE PULL REQUEST MANAGEMENT // GITHUB CLI TUTORIAL [GOOD]
+	=> https://youtu.be/Ku9_0Mftiic
+

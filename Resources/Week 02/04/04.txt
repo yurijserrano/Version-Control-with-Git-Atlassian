@@ -1,0 +1,73 @@
+In this video we will discuss references. We will start by discussing branch
+labels and the HEAD reference. Commits can be associated with references. A reference is a user-friendly name that
+points to either a commit's SHA-1 value or to another reference. If a reference points
+to another reference, it's called a symbolic reference. Here, the latest commit has two references
+associated with it, HEAD and master. Master is the default name of
+the main branch in the repository. A branch is an independent path for
+a set of commits. If we never create a branch in
+a repository, then by default, all commits are part of the master branch. A branch label points to the most
+recent commit in the branch. That commit is commonly
+called the tip of the branch. Branch labels are implemented
+as references. Both of the diagrams below
+display the same information, with commits laid out horizontally on
+the left, and vertically on the right. In this example, there are three
+commits on the master branch, with the master branch label
+pointing to the tip of the branch. Notice the subtle difference between
+a branch and a branch label. All three commits belong
+to the master branch, even though the master branch label
+is only at the tip of the branch. Since a branch in Git is
+implemented as a tiny branch label, branches are extremely simple to
+implement and use very few resources. HEAD is a reference to the current commit. It usually points to the branch
+label of the current branch. Because it only points to the current
+commit, and there can only be one current commit, there is only one HEAD
+reference in your local repository. In this example, we have three
+commits on the master branch. The master branch label reference
+points to the most recent commit. The HEAD reference points
+to the master branch label. You can also see this relationship
+when you look at the details for the most recent commit in SourceTree. The HEAD reference points
+to the master branch label, which points to the current commit's
+SHA-1 value by association. You can see that this is the same
+relationship as the one shown in the diagram. Finally, we will discuss tags. A tag is a reference attached
+to a specific commit. It acts as a user-friendly label for
+the commit. These are different from branch labels,
+which move along with each new commit. Tags are used to mark important commits,
+like version 1.0. To add a tag to a commit,
+right-click on it and select tag. Under commit, the commit that you right-clicked
+on should be already specified. The other option is to
+select working copy parent, which means that you want to
+tag the most recent commit. Add a tag name. Here, we are naming this tag v0.1. Click add to finish adding
+the tag to the commit. The v0.1 tag is now visible
+under the description for the tagged commit, and
+under the tags tab on the left. When you are adding a tag to a commit,
+you can click on Advanced Options, which displays the options below it. Check the move existing tag box if there's
+already a tag with the same name and you want to move it to this tag. Otherwise, you will not be able to
+create a tag with an existing name. Normally, SourceTree will create
+what is called an annotated tag. An annotated tag is one of
+the four types of Git objects. However, if you check
+the lightweight tag box, you will create a simpler tag with
+less features than an annotated tag. That is one of the reasons why
+this option is not recommended. The sign tag checkbox allows you
+to sign the tag with GPG privacy. This option is available if you've
+specified a GPG program in the advanced SourceTree settings. An example usage of this is a product
+manager might be responsible for signing releases. The sign message text box is
+used to add a tag message. This is similar to a commit message,
+but for tags. You can provide more details
+about the tag with this option. The tag message will then be
+visible when you view tag details. Executing a push does not automatically
+transfer tags to the remote repository. If you have a remote repository specified,
+such as origin, select the push tag checkbox so that this
+tag is pushed to the remote repository. If the commits related to the tag
+are not in the repository, they will be pushed too. When others clone or
+fetch from the remote repository, the tag will be included. If you didn't select push tag
+when you created the tag, from the tags tab,
+you can right-click on the tag name and select push to, and then select the remote
+name to push to the remote repository. After you push tags,
+you can log in to Bitbucket and view them on the remote repository. We see here that we have pushed two tags. When other users clone or fetch from this
+repository, they will also see the tags. Here is a review of what we've
+discussed in this video. A branch label is a reference that
+points to the tip of the branch. HEAD is a reference that
+points to the current commit. Create tags to place labels
+on specific commits. Tags are not automatically
+pushed to remote repositories. Now it's time for you to work on some of the things
+that we've discussed in this video. Separate hands-on instructions
+are provided for you.
