@@ -1,0 +1,86 @@
+DELETE BRANCH REMOTE AND LOCAL
+	=> https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely
+
+PUSH A LOCAL BRANCH TO REMOTE BRANCH
+	=> https://stackoverflow.com/questions/2765421/how-do-i-push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too
+
+RESET A REPO FOR A PARTICULAR COMMIT
+	=> https://stackoverflow.com/questions/8839958/how-does-origin-head-get-set#:~:text=If%20you%20want%20to%20fix,to%20the%20appropriate%20remote%20branch.&text=And%20origin%2FHEAD%20will%20point,only%20and%20not%20for%20others.
+
+
+GIT SWITCH - SWITCH BRANCH
+
+	https://devconnected.com/how-to-switch-branch-on-git/
+
+	https://www.infoq.com/news/2019/08/git-2-23-switch-restore/
+
+REBASE
+
+	 https://stackoverflow.com/questions/16675766/get-the-difference-between-two-branches-in-git
+
+	 https://stackoverflow.com/questions/30296670/understanding-and-using-git-rebase
+
+	 https://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit
+
+	 https://medium.com/mindorks/understanding-git-merge-git-rebase-88e2afd42671
+
+	 https://www.daolf.com/posts/git-series-part-2/
+
+	 https://morioh.com/p/29e8fd57daa3
+
+
+HEAD
+	https://stackoverflow.com/questions/26785118/head-vs-head-vs-head-also-known-as-tilde-vs-caret-vs-at-sign/26785200
+
+	https://stackoverflow.com/questions/2304087/what-is-head-in-git/2304106#:~:text=HEAD%20refers%20to%20the%20current,you%20currently%20have%20checked%2Dout.&text=The%20file%20refs%2Fheads%2Fmaster,refs%2Fheads%2Fmaster%20file.
+
+	https://stackoverflow.com/questions/51432398/relative-commit-references
+
+	https://stackoverflow.com/questions/2221658/whats-the-difference-between-head-and-head-in-git
+
+	https://medium.com/@gabicle/git-ancestry-references-explained-bd3a84a0b821
+
+	http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
+
+
+TAG
+	https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/
+
+	https://gist.github.com/mobilemind/7883996
+
+	https://devconnected.com/how-to-list-git-tags/#:~:text=In%20order%20to%20list%20Git,tag%E2%80%9D%20command%20with%20no%20arguments.&text=You%20can%20also%20execute%20%E2%80%9Cgit,description%20of%20your%20tag%20list.&text=Optionally%2C%20you%20can%20choose%20to,followed%20by%20the%20tag%20pattern.
+
+	https://stackoverflow.com/questions/5480258/how-to-delete-a-remote-tag#:~:text=Select%20and%20expand%20the%20%22Tags,select%20%22Remove%20Tag%20From%20Remotes%22
+
+	https://stackoverflow.com/questions/49227759/how-to-push-a-tag-to-a-remote-repository
+
+	https://stackoverflow.com/questions/23212452/how-to-only-push-a-specific-tag-to-remote?lq=1
+
+
+GIT ADD
+	
+	https://www.dineshonjava.com/difference-between-git-add-a-and-git-add-dot-and-git-u/#:~:text=git%20add%20-u%20looks%20at,handy%20shortcut%20for%20doing%20both.
+
+
+RESET
+
+	https://devconnected.com/how-to-unstage-files-on-git/#:~:text=To%20unstage%20commits%20on%20Git,and%20specify%20the%20commit%20hash.&text=Alternatively%2C%20if%20you%20want%20to%20unstage%20your%20last%20commit%2C%20you,order%20to%20revert%20it%20easily.&text=Using%20the%20“–soft”%20argument,your%20working%20directory%20and%20index.
+
+REFLOG
+
+	https://stackoverflow.com/questions/10099258/how-can-i-recover-a-lost-commit-in-git
+
+CHEAT SHEET
+
+https://gist.github.com/prograhammer/81cac393bf599e69f825 - OK
+https://education.github.com/git-cheat-sheet-education.pdf - OK
+https://gist.github.com/jedmao/5053440 - OK
+https://gist.github.com/davfre/8313299 - OK
+https://gist.github.com/mignonstyle/4b437a4060646f55964b85cd6edb4ee3 - OK
+https://gist.github.com/rimatla/f771a2938b978f2599e5ee4a5c020af4 - OK
+https://gist.github.com/hofmannsven/6814451 - OK
+https://gist.github.com/akras14/3d242d80af8388ebca60 - OK
+https://gist.github.com/eashish93/3eca6a90fef1ea6e586b7ec211ff72a5 - OK
+https://gist.github.com/dustinmartin/2966397 - OK
+https://gist.github.com/raineorshine/5128563 - OK
+https://gist.github.com/cferdinandi/ef665330286fd5d7127d - OK
